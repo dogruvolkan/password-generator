@@ -5,9 +5,8 @@
 }
 
 body {
-    background-color: #CAEDF7;
+    background-color: #eeeeee;
     font-family: neo-sans, Arial, Helvetica, sans-serif;
-    ;
 }
 
 .App {
@@ -16,22 +15,22 @@ body {
     align-items: center;
     min-height: 100vh;
     justify-content: center;
+    gap: 10px;
 }
 
 .card-input {
-    width: 800px;
-    height: 115px;
+    width: 50%;
     display: flex;
     align-items: center;
     background-color: white;
-    padding: 34px;
-    margin-bottom: 20px;
+    padding: 20px;
     border-radius: 6px;
 }
 
 .card-input input {
     width: 100%;
     border: none;
+    outline: 0;
     font-size: 25px;
     padding: 8px;
 }
@@ -44,24 +43,21 @@ body {
     font-size: 25px;
     padding-right: 5px;
     cursor: pointer;
+    background-color: transparent;
 }
 
 .password-create-btn {
     border: none;
     background-color: transparent;
-}
-
-.password-create {
     font-size: 25px;
     cursor: pointer;
 }
 
 .customize-card {
-    width: 800px;
-    height: 350px;
+    width: 50%;
     background-color: white;
     padding: 34px;
-    border-radius: 6px;
+    border-radius: 5px;
 }
 
 .customize-card h1 {
@@ -72,80 +68,63 @@ body {
 
 .customize-area {
     display: flex;
-    align-items: flex-start;
-    justify-content: space-evenly;
+    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
+    gap: 10px;
     padding: 30px 0;
 }
 
-.password-length {
-    width: 450px;
+.password-length fieldset {
     display: flex;
-    flex-direction: column;
-}
-
-.password-length p {
-    font-size: 18px;
-    font-weight: 400;
-}
-
-.password-length-inputs {
-    margin-top: 15px;
-}
-
-.password-length input[type="number"] {
-    height: 50px;
-    width: 75px;
-    padding: 8px;
-    border: 1px solid #C8C8C8;
+    padding: 10px;
+    border: 1px solid #c8c8c8;
     border-radius: 5px;
+}
+
+.password-length legend {
+    font-weight: 500;
+}
+
+.password-length input {
+    width: 120px;
+    padding: 7px;
+    border: none;
     font-size: 20px;
 }
 
-.password-length input[type="range"] {
-    margin-left: 15px;
-    width: 250px;
-    accent-color: #DD2222;
+.password-length input:focus {
+    outline: none;
 }
 
-
-
-.password-features {
+.password-features fieldset {
     display: flex;
+    gap: 20px;
+    padding: 20px;
+    border: 1px solid #c8c8c8;
+    border-radius: 5px;
 }
 
-.radio-btns,
-.checkbox-btns {
-    width: 170px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+.password-features legend {
+    font-weight: 500;
 }
 
-.radio-btns {
-    margin-right: 20px;
+.password-features input {
+    margin-right: 5px;
+    accent-color: #dd2222;
 }
 
-.radio-btns label {
-    padding-top: 20px;
-    font-size: 18px;
-    font-weight: 400;
+.password-features label:hover {
+    cursor: pointer;
 }
 
-.radio-btns input,
-.checkbox-btns input {
-    width: 20px;
-    height: 20px;
-    accent-color: #DD2222;
+.length-range input {
+    accent-color: #dd2222;
+    width: 100%;
 }
 
-.radio-btns span,
-.checkbox-btns span {
-    padding: 0 10px;
+.length-range input:focus {
+    cursor: pointer;
 }
 
-.checkbox-btns label {
-    padding-top: 20px;
-    font-size: 18px;
-    font-weight: 400;
-}
+/* responsive */

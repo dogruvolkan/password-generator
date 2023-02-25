@@ -1,61 +1,103 @@
-import React from "react";
-import { IoMdInformationCircleOutline } from "react-icons/io";
+import React, { useContext } from "react";
 import "../App.css";
+import { PasswordContext } from "../context/PasswordContext";
 
 const CustomizePassword = () => {
+  const {
+    inputValue,
+    setInputValue,
+    buyukHarfChecked,
+    setBuyukHarfChecked,
+    kucukHarfChecked,
+    setKucukHarfChecked,
+    sayiChecked,
+    setSayiChecked,
+    sembolChecked,
+    setSembolChecked,
+  } = useContext(PasswordContext);
+
+  const BuyukHarfChange = () => {
+    setBuyukHarfChecked(!buyukHarfChecked);
+  };
+
+  const KucukHarfChange = () => {
+    setKucukHarfChecked(!kucukHarfChecked);
+  };
+  const SayiChange = () => {
+    setSayiChecked(!sayiChecked);
+  };
+
+  const SembolChange = () => {
+    setSembolChecked(!sembolChecked);
+  };
+
   return (
-    <div>
-      <div className="customize-card">
-        <h1>Customize your password</h1>
-        <hr />
-        <div className="customize-area">
-          <div className="password-length">
-            <div>
-              <p>password length</p>
-            </div>
-            <div className="password-length-inputs">
-              <input type="number" />
-              <input type="range" />
-            </div>
-          </div>
-          <div className="password-features">
-            <div className="radio-btns">
-              <label>
-                <input type="radio" />
-                <span>Easy to say</span>
-                <IoMdInformationCircleOutline  className="radio-info"/>
-              </label>
-              <label>
-                <input type="radio" />
-                <span>Easy to read</span>
-                <IoMdInformationCircleOutline className="radio-info"/>
-              </label>
-              <label>
-                <input type="radio" />
-                <span>All characters</span>
-                <IoMdInformationCircleOutline className="radio-info"/>
-              </label>
-            </div>
-            <div className="checkbox-btns">
-              <label>
-                <input type="checkbox" />
-                <span>Uppercase</span>
-              </label>
-              <label>
-                <input type="checkbox" />
-                <span>Lowercase</span>
-              </label>
-              <label>
-                <input type="checkbox" />
-                <span>Numbers</span>
-              </label>
-              <label>
-                <input type="checkbox" />
-                <span>Symbols</span>
-              </label>
-            </div>
-          </div>
+    <div className="customize-card">
+      <h1>Customize your password</h1>
+      <hr />
+      <div className="customize-area">
+        <div className="password-length">
+          <fieldset>
+            <legend>Password Length</legend>
+            <input
+              type="number"
+              min="1"
+              max="50"
+              value={inputValue}
+              onChange={(e) => setInputValue(e.target.value)}
+            />
+          </fieldset>
         </div>
+        <div className="password-features">
+          <fieldset>
+            <legend>Password Properties</legend>
+            <label>
+              <input
+                type="checkbox"
+                value="buyukharf"
+                checked={buyukHarfChecked}
+                onChange={BuyukHarfChange}
+              />
+              <span>Büyük Harf</span>
+            </label>
+            <label>
+              <input
+                type="checkbox"
+                value="buyukharf"
+                checked={kucukHarfChecked}
+                onChange={KucukHarfChange}
+              />
+              <span>Küçük Harf</span>
+            </label>
+            <label>
+              <input
+                type="checkbox"
+                value="buyukharf"
+                checked={sayiChecked}
+                onChange={SayiChange}
+              />
+              <span>Sayılar</span>
+            </label>
+            <label>
+              <input
+                type="checkbox"
+                value="buyukharf"
+                checked={sembolChecked}
+                onChange={SembolChange}
+              />
+              <span>Semboller</span>
+            </label>
+          </fieldset>
+        </div>
+      </div>
+      <div className="length-range">
+        <input
+          type="range"
+          min="1"
+          max="50"
+          value={inputValue}
+          onChange={(e) => setInputValue(e.target.value)}
+        />
       </div>
     </div>
   );
