@@ -11,8 +11,8 @@
 - [x] sembolleri seçenek olarak sunma
 - [x] input range ile password uzunluğu alma
 - [ ] üretilen passwordun içeriğine göre kolay orta güçlü deme
-- [ ] passwordu kopyalayabilme
-- [ ] responsive tasarım
+- [x] passwordu kopyalayabilme
+- [x] responsive tasarım
 
 ### Projede kullanılan Teknolojiler ve Metotlar :
 
@@ -25,8 +25,8 @@
 ### proje font ve renk:
 
 (font-family: 'Roboto', sans-serif;)
-(background-color: #FFFFFF;)
-(App background-color: #443C68;)
+(background-color: #eeeeee;)
+(App background-color: #EEEEEE;)
 
 ### Proje Adresi
 
@@ -34,5 +34,5 @@
 
 ### Projenin Görselleri:
 
-![ekran görüntüsü](mobile.png)
-![ekran görüntüsü](desktop.png)
+![ekran görüntüsü](src/mobile.png)
+![ekran görüntüsü](src/desktop.png)

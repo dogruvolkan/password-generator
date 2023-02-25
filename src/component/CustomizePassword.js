@@ -58,7 +58,7 @@ const CustomizePassword = () => {
                 checked={buyukHarfChecked}
                 onChange={BuyukHarfChange}
               />
-              <span>Büyük Harf</span>
+              <span>Uppercase</span>
             </label>
             <label>
               <input
@@ -67,7 +67,7 @@ const CustomizePassword = () => {
                 checked={kucukHarfChecked}
                 onChange={KucukHarfChange}
               />
-              <span>Küçük Harf</span>
+              <span>Lowercase</span>
             </label>
             <label>
               <input
@@ -76,7 +76,7 @@ const CustomizePassword = () => {
                 checked={sayiChecked}
                 onChange={SayiChange}
               />
-              <span>Sayılar</span>
+              <span>Numbers</span>
             </label>
             <label>
               <input
@@ -85,7 +85,7 @@ const CustomizePassword = () => {
                 checked={sembolChecked}
                 onChange={SembolChange}
               />
-              <span>Semboller</span>
+              <span>Symbols</span>
             </label>
           </fieldset>
         </div>

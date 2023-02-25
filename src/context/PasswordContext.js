@@ -9,6 +9,7 @@ export const PasswordProvider = ({ children }) => {
   const [sayiChecked, setSayiChecked] = useState(false);
   const [sembolChecked, setSembolChecked] = useState(false);
   const [password, setPassword] = useState("");
+  const [copied, setCopied] = useState(false);
 
   return (
     <PasswordContext.Provider
@@ -25,6 +26,8 @@ export const PasswordProvider = ({ children }) => {
         setSayiChecked,
         sembolChecked,
         setSembolChecked,
+        copied,
+        setCopied,
       }}
     >
       {children}

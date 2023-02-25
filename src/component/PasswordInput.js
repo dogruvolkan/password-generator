@@ -2,6 +2,7 @@ import React, { useContext, useEffect } from "react";
 import "../App.css";
 import { MdOutlineContentCopy, MdSync } from "react-icons/md";
 import { PasswordContext } from "../context/PasswordContext";
+import { CopyToClipboard } from "react-copy-to-clipboard";
 
 const PasswordInput = () => {
   const {
@@ -12,6 +13,7 @@ const PasswordInput = () => {
     setPassword,
     sayiChecked,
     sembolChecked,
+    setCopied,
   } = useContext(PasswordContext);
 
   const CreatePassword = () => {
@@ -50,15 +52,20 @@ const PasswordInput = () => {
     return symbols[random(0, symbols.length - 1)];
   };
 
-  useEffect(() => {
-    CreatePassword();
-  }, []);
+  // useEffect(() => {
+  //   CreatePassword();
+    
+  // }, []);
 
   return (
     <div className="card-input">
       <input value={password} readOnly />
       <div>
-        <MdOutlineContentCopy className="password-copy" />
+        <CopyToClipboard text={password} onCopy={setCopied(true)}>
+          <button>
+            <MdOutlineContentCopy className="password-copy" />
+          </button>
+        </CopyToClipboard>
       </div>
       <div>
         <button onClick={CreatePassword} className="password-create-btn">

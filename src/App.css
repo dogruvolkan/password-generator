@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;900&display=swap');
+
+
 * {
     margin: 0;
     padding: 0;
@@ -6,7 +9,7 @@
 
 body {
     background-color: #eeeeee;
-    font-family: neo-sans, Arial, Helvetica, sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 .App {
@@ -28,7 +31,7 @@ body {
 }
 
 .card-input input {
-    width: 100%;
+    width: 90%;
     border: none;
     outline: 0;
     font-size: 25px;
@@ -37,6 +40,16 @@ body {
 
 .card-input input:focus {
     outline: none;
+}
+
+.card-input button {
+    border: none;
+    background-color: transparent;
+    text-align: center;
+}
+
+.card-input .green-btn {
+    color: green;
 }
 
 .password-copy {
@@ -128,3 +141,196 @@ body {
 }
 
 /* responsive */
+
+@media only screen and (max-width: 600px) {
+    .App {
+        padding: 10px;
+    }
+
+    .card-input {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .card-input input {
+        width: 90%;
+        font-size: 20px;
+    }
+
+    .customize-card {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .customize-card h1 {
+        font-size: 18px;
+        font-weight: 800;
+    }
+
+    .customize-area {
+        align-items: flex-start;
+    }
+
+    .password-length legend {
+        font-size: 14px;
+    }
+
+    .password-length input {
+        width: 80px;
+        font-size: 18px;
+    }
+
+    .password-features fieldset {
+        flex-direction: column;
+    }
+
+    .password-features legend {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .App {
+        padding: 10px;
+    }
+
+    .card-input {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .card-input input {
+        width: 90%;
+        font-size: 20px;
+    }
+
+    .customize-card {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .customize-card h1 {
+        font-size: 20px;
+        font-weight: 800;
+    }
+
+    .customize-area {
+        align-items: center;
+    }
+
+    .password-length legend {
+        font-size: 15px;
+    }
+
+    .password-length input {
+        width: 80px;
+        font-size: 18px;
+    }
+
+    .password-features fieldset {
+        flex-direction: row;
+    }
+
+    .password-features legend {
+        font-size: 15px;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .App {
+        padding: 40px;
+    }
+
+    .card-input {
+        width: 50%;
+        padding: 15px;
+    }
+
+    .card-input input {
+        width: 90%;
+        font-size: 20px;
+    }
+
+    .customize-card {
+        width: 50%;
+        padding: 15px;
+    }
+
+    .customize-card h1 {
+        font-size: 20px;
+        font-weight: 800;
+    }
+
+    .customize-area {
+        align-items: flex-start;
+    }
+
+    .password-length legend {
+        font-size: 14px;
+    }
+
+    .password-length input {
+        width: 80px;
+        font-size: 18px;
+    }
+
+    .password-features fieldset {
+        flex-direction: column;
+    }
+
+    .password-features legend {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .App {
+        padding: 40px;
+    }
+
+    .card-input {
+        width: 55%;
+        padding: 20px;
+    }
+
+    .card-input input {
+        width: 90%;
+        font-size: 25px;
+    }
+
+    .customize-card {
+        width: 55%;
+        padding: 20px;
+    }
+
+    .customize-card h1 {
+        font-size: 20px;
+        font-weight: 800;
+    }
+
+    .customize-area {
+        align-items: center;
+    }
+
+    .password-length legend {
+        font-size: 16px;
+    }
+
+    .password-length input {
+        width: 80px;
+        font-size: 18px;
+    }
+
+    .password-features fieldset {
+        display: flex;
+        flex-direction: row;
+        gap: 15px;
+        padding: 20px;
+        border: 1px solid #c8c8c8;
+        border-radius: 5px;
+    }
+
+    .password-features legend {
+        font-size: 16px;
+    }
+}
